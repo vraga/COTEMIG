@@ -1,0 +1,87 @@
+/*
+             * Apostila COTEMIG de Técnicas de Programação 2013
+             * Aluno: HVraga
+             * 
+             * Página: 53 / Exercício: 01
+             * 
+             * Deseja-se fazer um levantamento a respeito da ausência de alunos na prova de Técnicas de programação. 
+             * Para cada aluno são atribuidos dois códigos:
+             *      Sexo: F  ou M
+             *      Código da Frequência: 0 p/ presente e 1 p/ ausênte
+             * 
+             * Faça um programa que leia o sexo e o código de cada aluno, calcule e imprima o número de ausêntes de cada sexo. 
+             * O flag é presença = 2.
+             * 
+             */
+
+            int cod, quantf=0, quantm=0 , quantf_presente=0, quantm_presente=0;
+            char sexo, inicio;
+
+            Console.Write("Deseja iniciar o programa? (S) ou (N)");
+            inicio = char.Parse(Console.ReadLine());
+            
+            while(inicio == 'S' || inicio == 's')
+            {
+                
+                Console.Write("Digite (0) para presente (1) para ausênte ou (2) para finalizar o programa:  "); 
+                cod = int.Parse(Console.ReadLine());
+
+
+                if (cod == 1)
+                {
+                    Console.Write("Digite (F) para feminino o (M) para masculino:  ");
+                    sexo = char.Parse(Console.ReadLine());
+
+                    Console.WriteLine(" ");
+
+                    if (sexo == 'f' || sexo == 'F')
+                    {
+                        quantf++;
+                    }
+                    else if (sexo == 'm' || sexo == 'M')
+                    {
+                        quantm++;
+                    }
+                    else Console.WriteLine("Sexo inválido!");
+
+                }
+
+                else if (cod == 0)
+                {
+                    Console.Write("Digite (F) para feminino o (M) para masculino:  ");
+                    sexo = char.Parse(Console.ReadLine());
+
+                    Console.WriteLine(" ");
+
+
+                    if (sexo == 'f' || sexo == 'F')
+                    {
+                        quantf_presente++;
+                    }
+                    else if (sexo == 'm' || sexo == 'M')
+                    {
+                        quantm_presente++;
+                    }
+                    else Console.WriteLine("Sexo inválido!");
+
+                }
+
+                else if (cod == 2)
+                {
+                    Console.WriteLine(" ");
+                    Console.WriteLine(" O número de meninas ausêntes é de: " + quantf);
+                    Console.WriteLine(" O número de meninos ausêntes é de: " + quantm);
+                    Console.WriteLine(" ");
+                    Console.WriteLine(" O número de meninos presentes é de: " + quantm_presente);
+                    Console.WriteLine(" O número de meninas presentes é de: " + quantf_presente);
+                    Console.WriteLine(" ");
+                    Console.Write("Deseja continuar o programa? (S) ou (N)");
+                    inicio = char.Parse(Console.ReadLine());
+                    Console.WriteLine(" ");
+                }
+
+                else Console.WriteLine("Opção inválida!");
+            }
+            
+            Console.Write("Pressione qualquer tecla para sair");
+            Console.ReadKey();
