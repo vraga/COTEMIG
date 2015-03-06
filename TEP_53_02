@@ -1,0 +1,31 @@
+/*
+             * Apostila COTEMIG de Técnicas de Programação 2013
+             * Aluno: HVraga
+             * 
+             * Página: 53 / Exercício: 02
+             * 
+             * Fazer a soma de vários valores inteiros e positivos fornecidos como entrada. 
+             * O ultimo numero digitad tem o valor de 0 e nao deve ser considerado.
+             * 
+             */
+
+            int num, soma=0;
+
+            Console.Write(" PARA PARAR O PROGRAMA DIGITE 0 ");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.Write("Digite um número: " );
+            num = char.Parse(Console.ReadLine());
+
+            while (num != 0)
+            {
+                Console.Write("Digite um número: ");
+                num = int.Parse(Console.ReadLine());
+
+                soma = soma + num;
+
+            }
+
+            Console.WriteLine("");
+            Console.Write("A soma dos números é: " + soma);
+            Console.ReadKey();
