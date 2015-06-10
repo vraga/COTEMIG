@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace modularizacao_267_02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+         /*
+          * PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS
+          * Instituto de Ciências Exatas e de Informática - Curso de Sistemas de Informação
+          * Algoritmos e Técnicas de Programação (ATP)	
+          * Profa.: Rosilane Mota 
+          * Aluna: Franciele Sena
+          * 
+          * Apostila: Fundamentos da Programação de computadores 2ª Edição
+          * Exercício:Página 267 (02)
+          * 
+          */
+
+            int h, m, s;
+
+            Console.Write("Digite as horas: ");
+            h = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite as Minutos: ");
+            m = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite as Segundos: ");
+            s = int.Parse(Console.ReadLine());
+
+            //Usando Procedimento com exibição interna
+            converter(h, m, s); //Chamando o processedimento
+        }
+
+        static void converter (int hor, int min, int sec)
+        {
+
+            int final1, final2, final3;
+
+            final1 = hor * 3600; //Transformando horas em segundos
+            final2 = min * 60; //Transformando minutos em segundos
+
+            final3 = final1 + final2 + sec; //Realizando a soma dos segundos
+
+
+            //Final
+            Console.WriteLine("A conversão em segundos fica: " + final3);
+            Console.ReadKey();
+
+        }
+    }
+}
